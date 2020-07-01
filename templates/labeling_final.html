@@ -1,0 +1,227 @@
+<html>
+<head>
+  <title>
+    Survey
+  </title>
+</head>
+<style>
+body{
+  position:relative;
+   margin:0 auto; 
+   height: 100%;
+ background-position: center;
+ background-color: rgb(195,230,233);
+ }
+
+ p{
+    /*padding-top: 0.5cm ;
+    padding-bottom: 0.5cm;*/
+    font-weight: 200;
+ }
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  /*margin: 0em 0 0em 0;*/
+  font-weight: normal;
+  position: relative;
+  text-shadow: 0 -1px rgba(0,0,0,0.6);
+  font-size: 28px;
+  /*height: 40px;*/
+  background: #355681;
+  background: rgba(53,86,129, 0.8);
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  color: white;
+  /*border-radius: 0 10px 0 10px;*/
+  box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+  font-family: 'Muli', sans-serif;
+  width:100%;
+}
+
+figure {
+    display: inline-block;
+    background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  /*color: white;*/
+  width:100%;
+  /*margin-bottom: -0.5cm;*/
+  margin-top: -0.5cm;
+  
+     
+}
+figure img {
+    vertical-align: top;
+    margin-top: 1cm;
+    margin-left: 1cm;
+    float:left;
+}
+figure figcaption {
+    border: 5px ;
+    color: black;
+    background-color: rgb(255, 255, 224);
+    text-align: center;
+    padding: 1cm 1cm 1cm;
+    margin-top: 1cm;
+    margin-left: 1cm;
+    margin-right: 2cm;
+    overflow: scroll;
+  overflow-x: hidden;
+  float:right;
+  height: 500px;
+  width: 500px;
+  border:3px solid black;
+  /*height:100%;*/
+    /*margin-bottom: 1cm;*/
+}
+/* Create two unequal columns that floats next to each other */
+ .bg-image {
+  height: 100%;
+  width: 100%
+ background: rgb(195,230,233);
+background: linear-gradient(90deg, rgba(195,230,233,0.9290091036414566) 9%, rgba(0,212,255,1) 100%);
+ /*background-repeat: repeat;*/
+ background-position: center;
+}
+.pane1{
+  left:0;
+  /*overflow: scroll;*/
+  overflow-x: hidden;
+  background-color:white;
+  text-align:left;
+  height:100%;
+  padding: 1cm 1cm 1cm;
+  /*margin-left:1cm;*/
+  border: 3px solid gray;
+  float:left;
+  width:30%;
+  
+}
+.row{
+  width: 100%;
+  /*position: relative;*/
+  /*margin-top: -0.5cm;*/
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.pane2{
+    right:0;
+    height:100%;
+  /*overflow: scroll;*/
+  overflow-x: hidden;
+  color:black;
+  text-align: center;
+  float:right;
+  width:70%;
+}
+.center {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+   width: 100%;
+   height:85%;
+  margin-bottom:auto;
+  float:top;
+}
+.bottomright {
+  /*position: absolute;*/
+  /*bottom: 8px;
+  right: 16px;*/
+  float: bottom;
+  font-size: 18px;
+}
+</style>
+
+
+<!-- <b><h1 align=center > <font face="Copperplate" font=7 color = "black"> CHATRLAB </font></h1></b> -->
+<body>
+<!-- <div class="bg-image"></div> -->
+<b><h1 style="position: absolute;top:0;text-align: center;">Social Media Vaccine Posts Classification Project</h1></b>
+<div class="center">
+  
+
+<div class="row">
+   <div class="pane2">
+    <figure>
+    <img src= {{ image }}
+           width="500" 
+           height="500"
+           alt="Image"
+           border="3"> 
+      
+      <figcaption>Caption:<p>{{caption}}</p></br></br>Rendered Image text:<p>{{image_text}}</p></br></figcaption>
+      </figure>
+  
+    <div style="padding-right: 1cm;background-color: white;margin-left: 1cm; height: 30%;position: relative; border:3px solid gray;">
+    
+    <form action="input" method="post">
+        <div style="float: left;width: 500px;margin-left: 1cm;">
+        <h3 style="padding-top: 1cm;">What do you believe is the attitude of the post?</h3>
+        <input type="radio" name="label" value='1'> Anti-vaccine <br>
+        <input type="radio" name="label" value='2'> Not Anti-vaccine<br>
+        <input type="radio" name="label" value='3' style="margin-bottom: 1cm;"> Undecided <br>
+      
+        </div>
+
+        <div style="float: left;width:500px;margin-left: 1cm;">
+      <h3 style="padding-top: 1cm;">What do you believe is the attitude of the post?</h3>
+        <input type="radio" name="misinf" value='a'> Yes <br>
+        <input type="radio" name="misinf" value='b'> No<br>
+        <input type="radio" name="misinf" value='c' style="margin-bottom: 1cm;"> Undecided <br>
+      
+        </div>
+        <div style="display:flex;">
+      <input type='submit' name="action" value='Submit' style="margin-left: 1cm;position: absolute;bottom:40%;font-size: 18px;
+      background-color: rgb(50, 56, 168);color:white;">
+      <input type='submit' name="action" value='Delete' style="margin-left: 1cm;background-color: rgb(50, 56, 168);color:white;position: absolute;bottom:20%;font-size:18px;">
+  </div>
+    </form>
+
+
+   <!-- form style -->
+    </div>   
+    <!-- pane2  -->
+</div>  
+
+   <div class="pane1">
+    <h2>Instructions</h2>
+     <p>This task asks you to judge
+the attitude towards vaccine
+as indicated from the shown
+social media post.<br><br>
+
+1. Please review all
+components of the post
+including captions, images
+and texts, and select an
+option.<br>
+
+2. If you think the post
+contains misinformation,
+please select an option too.<br><br></p>
+     <p style="font-weight: bold;">Posts Completed by {{ name }} : {{ count }}</p>
+   </div>
+
+
+
+
+<!-- <div style="clear:both"></div> -->
+<!-- width -->
+</div>
+
+<!-- centre -->
+</div>
+<h1 style='color:white;text-align:center;font-size:12px;position: absolute;bottom: 0;'>CHATRLAB<br>University of California, Davis</h1>
+
+</body>
+
+</html>
